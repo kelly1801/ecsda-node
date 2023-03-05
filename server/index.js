@@ -3,13 +3,14 @@ const app = express();
 const cors = require("cors");
 const port = 3042;
 
+
 app.use(cors());
 app.use(express.json());
 
 const balances = {
-  "0x1": 100,
-  "0x2": 50,
-  "0x3": 75,
+  "8a7bbe7eb954d78a9cae": 100,
+  "cb9dc18f598f1af056da": 50,
+  "9bd150062a0d63237f1a": 75,
 };
 
 app.get("/balance/:address", (req, res) => {
